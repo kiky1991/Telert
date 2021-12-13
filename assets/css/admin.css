@@ -1,0 +1,982 @@
+.telert-wrapper *,
+.telert-wrapper *:before,
+.telert-wrapper *:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.telert-wrapper .nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+
+.telert-notice {
+    background-color: #fff;
+    padding: 10px 15px;
+    /*border: 1px solid #eee;*/
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    border-left: 4px solid #faa026;
+}
+
+.telert-notice p {
+    margin: 0;
+}
+
+.telert-setting {
+    margin-top: 20px;
+}
+
+.telert-setting .setting-section {
+    margin-bottom: 20px;
+}
+
+.telert-setting .section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.telert-setting .setting-table {
+    display: table;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+    border: 1px solid #ddd;
+}
+
+.telert-setting .setting-table .setting-row {
+    display: table-row;
+}
+
+.telert-setting .setting-table .setting-index {
+    width: 300px;
+    background-color: #f8f8f8;
+    display: table-cell;
+    padding: 20px 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+
+.telert-setting .setting-table .setting-index label {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 5px;
+    display: block;
+}
+
+.telert-setting .setting-table .setting-row.setting-error .setting-index label:after {
+    content: " \f534";
+    color: #dc3232;
+    font-family: 'dashicons';
+    font-size: 20px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.telert-setting .setting-table .setting-index p.helper {
+    margin: 0;
+    font-style: italic;
+    font-size: 12px;
+    opacity: 0.5;
+    line-height: 15px;
+}
+
+.telert-setting .setting-table .setting-option {
+    display: table-cell;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    padding: 20px 15px 20px;
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+}
+
+.telert-setting .setting-table .setting-option label {
+    display: block;
+    font-size: 13px;
+}
+
+.telert-setting .setting-table .setting-option input[type="text"],
+.telert-setting .setting-table .setting-option input[type="email"],
+.telert-setting .setting-table .setting-option input[type="number"],
+.telert-setting .setting-table .setting-option input[type="password"],
+.telert-setting .setting-table .setting-option select,
+.telert-setting .setting-table .setting-option textarea {
+    width: 100%;
+}
+
+.telert-setting .setting-table .setting-option input[type="submit"] {
+    margin-top: 15px;
+}
+
+.telert-setting .setting-table .setting-option .toggle {
+    display: inline-block;
+    background-color: #eee;
+    height: 40px;
+    border-radius: 20px;
+    padding: 3px;
+    font-size: 0;
+    box-shadow: 0 0 5px rgba(20, 20, 20, .05) inset;
+}
+
+.telert-setting .setting-table .setting-option .toggle input {
+    display: none;
+}
+
+.telert-setting .setting-table .setting-option .toggle label {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    height: 34px;
+    margin: 0;
+    line-height: 24px;
+    border-radius: 17px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .5);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.telert-setting .setting-table .setting-option .toggle input:checked+label {
+    background-color: #faa026;
+    color: #fff;
+}
+
+.telert-setting .setting-table .setting-option .toggle label:after {
+    content: '';
+}
+
+.telert-setting .setting-table .setting-option .toggle input:not(:checked)+label:hover {
+    background-color: #e0e0e0;
+}
+
+.telert-setting .setting-table .setting-option .setting-sub-option {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-top: 15px;
+    display: none;
+}
+
+.telert-setting .setting-table .setting-option .setting-sub-option.show {
+    display: block;
+}
+
+.telert-setting .setting-table .setting-option .setting-sub-option>p {
+    margin: 0;
+}
+
+.telert-setting .setting-table .setting-option .setting-sub-option label {
+    margin: 5px 0 0;
+}
+
+.telert-setting .setting-table .setting-option .setting-sub-option label:first-child {
+    margin: 0;
+}
+
+.telert-setting .setting-table .setting-option .setting-sub-option label:after {
+    content: '';
+}
+
+.telert-setting .setting-table .setting-option>.helper {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.telert-setting .setting-table .setting-option .setting-sub-option .helper {
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.telert-setting .setting-table .setting-option .rajakongkir-api-fields .field-type {
+    float: left;
+    width: 30%;
+}
+
+.telert-setting .setting-table .setting-option .rajakongkir-api-fields .field-key {
+    float: right;
+    width: 70%;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.telert-setting .setting-table .setting-option .rajakongkir-api-fields .check {
+    clear: both;
+    padding-top: 15px;
+}
+
+.telert-setting .setting-table .setting-option .rajakongkir-api-fields .rajaongkir-key-response {
+    display: inline-block;
+    line-height: 28px;
+    padding: 0 10px;
+    vertical-align: top;
+    color: #ca4a1f;
+    font-weight: 600;
+}
+
+.telert-setting .setting-table .setting-option .rajakongkir-api-fields .rajaongkir-key-response.success {
+    color: #46b450;
+}
+
+.telert-setting .setting-table .setting-option .rajakongkir-api-fields .rajaongkir-key-response.loading {
+    color: #999;
+}
+
+.telert-setting .setting-table .setting-option .courier-options.pro {
+    column-count: 4;
+}
+
+.telert-setting .setting-table .setting-option .courier-options input {
+    display: none;
+}
+
+.telert-setting .setting-table .setting-option .courier-options label {
+    background-color: #f0f0f0;
+    margin-bottom: 2px;
+    height: 25px;
+    line-height: 25px;
+    max-width: 200px;
+    padding-left: 25px;
+    padding-right: 5px;
+    position: relative;
+    color: rgba(0, 0, 0, .7);
+}
+
+.telert-setting .setting-table .setting-option .courier-options.pro label {
+    max-width: none;
+}
+
+.telert-setting .setting-table .setting-option .courier-options label:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.telert-setting .setting-table .setting-option .courier-options input:checked+label {
+    color: #444;
+}
+
+.telert-setting .setting-table .setting-option .courier-options input:checked+label:after {
+    content: "\f147";
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    left: 0px;
+    top: 7px;
+    color: #faa026;
+    font-size: 24px;
+    font-family: dashicons;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    line-height: 11px;
+}
+
+.telert-setting .setting-table .setting-option .courier-options input:disabled+label {
+    color: rgba(0, 0, 0, .3);
+    cursor: not-allowed;
+}
+
+.telert-setting .setting-table .setting-option .courier-options input:disabled+label:before {
+    background: #e0e0e0;
+    opacity: 0;
+}
+
+.telert-setting .setting-table .setting-option .options-specific-service>div {
+    margin-bottom: 10px;
+}
+
+.telert-setting .setting-table .setting-option .options-specific-service>div>p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.telert-setting .setting-table .setting-option .options-specific-service .courier-service-options {
+    column-count: 3;
+}
+
+.telert-setting .setting-table .setting-option .options-specific-service .courier-options label {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.telert-setting .setting-table .setting-option .options-currency .check {
+    padding-top: 15px;
+}
+
+.telert-setting .setting-table .setting-option .options-currency .api-response {
+    padding: 0 0 0 10px;
+    margin: 0;
+    display: inline-block;
+    line-height: 28px;
+}
+
+.telert-setting .setting-table .setting-option .options-currency .api-response .success {
+    color: #46b450;
+}
+
+.telert-setting .setting-table .setting-option .options-currency .api-response .error {
+    color: #ca4a1f;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-container {
+    display: table;
+    width: 100%;
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.telert-setting .setting-repeater-wrapper.empty .repeater-container {
+    display: none;
+    margin-bottom: 0;
+}
+
+.telert-setting .setting-repeater-wrapper p.helper {
+    display: inline-block;
+    font-style: italic;
+    margin: 0;
+    vertical-align: top;
+    margin-left: 10px;
+    line-height: 28px;
+}
+
+.telert-setting .setting-repeater-wrapper.empty p.helper {
+    display: none;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-container .repeater-head {
+    display: table-row;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-container .repeater-head .repeater-col {
+    font-weight: 700;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-container .repeater-row {
+    display: table-row;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-container .repeater-col {
+    display: table-cell;
+    padding: 2px;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-container .repeater-col.nowrap {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-container .repeater-col select,
+.telert-setting .setting-repeater-wrapper .repeater-container .repeater-col input {
+    margin: 0;
+    vertical-align: top;
+}
+
+.telert-setting .setting-repeater-wrapper .repeater-base {
+    display: none;
+}
+
+.telert-setting .button-warning {
+    background-color: #a00;
+    text-shadow: none;
+    border-color: #800;
+    box-shadow: 0 2px 0 #800;
+    color: #fff;
+}
+
+.telert-setting .button-warning:hover,
+.telert-setting .button-warning:active,
+.telert-setting .button-warning:focus {
+    background-color: #b00;
+    color: #fff;
+    border-color: #800;
+}
+
+.telert-wrapper .additional-tab {
+    float: right;
+}
+
+.telert-wrapper .additional-tab a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.select2 {
+    width: 100% !important;
+}
+
+.select2-container {
+    margin: 1px 0;
+    font-size: 13px;
+}
+
+.select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+    border: 1px solid #ddd;
+    border-radius: 0;
+    min-height: 28px;
+    width: 100%;
+}
+
+.select2-container .select2-selection--single li,
+.select2-container .select2-selection--multiple li {
+    margin-bottom: 0;
+}
+
+.select2-container .select2-selection--single li input,
+.select2-container .select2-selection--multiple li input {
+    margin-top: 1px !important;
+    min-height: 24px !important;
+    margin-top: 2px;
+}
+
+.select2-container.select2-container--focus .select2-selection--single,
+.select2-container.select2-container--focus .select2-selection--multiple {
+    border-color: #5b9dd9;
+    box-shadow: 0 0 2px rgba(30, 140, 190, .8);
+}
+
+.select2-dropdown {
+    border-color: #ddd;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+    border: 1px solid #ddd;
+    border-radius: 0;
+    min-height: 28px;
+}
+
+.telert-notice-error {
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    padding: 1px 12px;
+    border-left: 4px solid #dc3232;
+}
+
+.telert-wc-setting {
+    margin-top: 15px;
+    background-color: #fff;
+    max-width: 500px;
+    padding: 15px;
+}
+
+.telert-wc-setting h3 {
+    text-align: center;
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.telert-wc-setting img {
+    display: block;
+    width: 100%;
+}
+
+.telert-wc-setting .button {
+    display: block;
+    margin: 15px auto 0;
+    max-width: 250px;
+    text-align: center;
+}
+
+.telert-wc-setting+p.submit {
+    display: none;
+}
+
+.telert-checker {
+    padding-left: 380px;
+}
+
+.telert-checker .sidebar {
+    width: 360px;
+    background-color: #fff;
+    margin-left: -380px;
+    float: left;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+    border: 1px solid #ddd;
+}
+
+.telert-checker .sidebar table {
+    width: 100%;
+    /*padding: 10px;*/
+}
+
+.telert-checker .sidebar table td {
+    /*vertical-align: top;*/
+    padding: 10px;
+}
+
+.telert-checker .sidebar table td.index {
+    width: 1%;
+    white-space: nowrap;
+    padding: 14px 10px;
+}
+
+.telert-checker .sidebar table td.value {
+    /*font-weight: 700;*/
+    vertical-align: middle;
+}
+
+.telert-checker .sidebar table input:not([type="checkbox"]),
+.telert-checker .sidebar table select {
+    font-weight: normal;
+    width: 100%;
+}
+
+.telert-checker .sidebar table tr.total {
+    display: none;
+}
+
+.telert-checker .sidebar table tr.total.show {
+    display: table-row;
+}
+
+.telert-checker .sidebar .couriers-wrapper {
+    columns: 2;
+}
+
+.telert-checker .sidebar .couriers-wrapper label {
+    display: block;
+}
+
+.telert-checker .sidebar .select2-container {
+    max-width: 250px;
+}
+
+.telert-checker .sidebar .submit {
+    text-align: right;
+    margin: 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.telert-checker .result {
+    float: right;
+    width: 100%;
+}
+
+.telert-checker .idle {
+    background-color: #fff7ed;
+    border: 1px solid #feecd4;
+    padding: 40px 0;
+}
+
+.telert-checker .idle h4 {
+    text-align: center;
+    color: #523002;
+    opacity: .3;
+    font-size: 16px;
+    margin: 0;
+}
+
+.telert-checker .idle .loading {
+    display: none;
+}
+
+.telert-checker .idle.loading .loading {
+    display: block;
+}
+
+.telert-checker .idle.loading .start {
+    display: none;
+}
+
+.telert-checker .idle.loading {
+    background: linear-gradient(90deg, #fff7ed, #feecd4);
+    background-size: 200% 200%;
+    animation: colorchange 2s;
+    -webkit-animation: colorchange 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes colorchange {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.telert-checker .no-result {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.telert-checker-result {
+    width: 100%;
+}
+
+.telert-checker-result .telert-logo {
+    width: 120px;
+    padding: 10px 20px;
+    border-bottom: 5px solid #f1f1f1;
+    background-color: #fff;
+}
+
+.telert-checker-result .telert-logo img {
+    max-width: 100%;
+}
+
+.telert-checker-result>thead th {
+    text-align: left;
+}
+
+.telert-checker-result>thead th table td {
+    text-align: left;
+}
+
+.telert-checker-result>thead th .telert-cost {
+    text-align: right;
+}
+
+.telert-checker-result .telert-services {
+    border-bottom: 5px solid #f1f1f1;
+    background-color: #fff;
+    padding: 10px 15px 10px 0;
+}
+
+.telert-checker-result .telert-services table {
+    width: 100%;
+}
+
+.telert-checker-result .telert-services table .telert-service {
+    padding: 2px 10px;
+}
+
+.telert-checker-result .telert-services table .telert-cost {
+    width: 100px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.telert-checker-result .telert-services table .telert-etd {
+    width: 100px;
+    padding-left: 10px;
+}
+
+.telert-custom-cost .custom-costs th,
+.telert-custom-cost .custom-costs td {
+    padding: 6px;
+}
+
+.telert-custom-cost .custom-costs select,
+.telert-custom-cost .custom-costs input {
+    width: 100%;
+}
+
+.telert-custom-cost .custom-costs .nowrap {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.telert-custom-cost .custom-costs .remove-manual {
+    color: #ca4a1f;
+    cursor: pointer;
+}
+
+.telert-custom-cost .custom-costs tfoot {
+    background-color: #eee;
+}
+
+.telert-custom-cost .custom-costs tfoot select[disabled] {
+    cursor: wait;
+}
+
+.telert-custom-cost .custom-costs tfoot input {
+    margin: 0;
+    height: 28px;
+    padding: 0 5px;
+}
+
+.telert-custom-form .info-warning {
+    padding: 5px 10px;
+    background-color: #fff7ed;
+    margin-bottom: 10px;
+    border: 1px solid #feecd4;
+}
+
+.telert-custom-form .info-warning p {
+    margin: 0;
+}
+
+.telert-onboard-content {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.telert-onboard-content .row,
+.telert-onboard-footer .row {
+    margin: 0 -10px;
+}
+
+.telert-onboard-content .row::after,
+.telert-onboard-footer .row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.telert-onboard-content .col-half {
+    width: 50%;
+    float: left;
+    padding: 0 10px;
+}
+
+.telert-onboard-footer .col-third {
+    width: 33.333333%;
+    float: left;
+    padding: 0 10px;
+}
+
+.telert-onboard-footer .col-fourth {
+    width: 25%;
+    float: left;
+    padding: 0 10px;
+}
+
+.telert-onboard-content .main-logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+.telert-onboard-content .main-logo .telert-logo {
+    width: 240px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.telert-onboard-content .main-logo .main-cta {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.telert-onboard-footer .more-content {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.telert-onboard-footer .more-content h3 {
+    margin: 0;
+}
+
+.telert-onboard-footer .more-btn .dashicons {
+    line-height: 28px;
+    font-size: 14px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.telert-onboard-footer .more-btn a:hover .dashicons {
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
+}
+
+/* report */
+#telert-report-summary {
+    padding: 10px;
+}
+
+#telert-report-summary table td {
+    padding: 2px 5px;
+}
+
+#telert-report-summary table .index {
+    padding-right: 15px;
+}
+
+#telert-report-summary table .value {
+    font-weight: 700;
+}
+
+#telert-zoom {
+    cursor: pointer;
+}
+
+.telert-full-image {
+    display: block;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -2px;
+    margin-bottom: -15px;
+}
+
+.telert-full-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.telert-report .widefat th,
+.telert-report .widefat th {
+    padding: 0;
+}
+
+.telert-report .bulkactions {
+    display: none;
+}
+
+.telert-debugger .debugger-setting {
+    margin-bottom: 15px;
+}
+
+.telert-debugger .debugger-setting h4 {
+    margin: 0 0 5px;
+}
+
+.telert-debugger .debugger-setting-status .setting-content {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px 0;
+}
+
+.telert-debugger .debugger-setting-status table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px 0;
+}
+
+.telert-debugger .debugger-setting-status table td {
+    padding: 2px 10px;
+}
+
+.telert-debugger .debugger-setting-status table .index {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.telert-debugger .debugger-setting-status table .separator {
+    width: .1%;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.telert-debugger .debugger-setting-status table .value span {
+    font-weight: 700;
+    display: inline-block;
+}
+
+.telert-debugger .debugger-setting-status table .value span.info {
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.telert-debugger .debugger-setting-status table .value span.yes {
+    color: #46b450;
+}
+
+.telert-debugger .debugger-setting-status table .value span.no {
+    color: #ca4a1f;
+}
+
+.telert-debugger .debugger-setting-setting table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+}
+
+.telert-debugger .debugger-setting-setting table td {
+    border-bottom: 1px solid #ddd;
+}
+
+.telert-debugger .debugger-setting-setting table .index {
+    width: 1%;
+    white-space: nowrap;
+    padding: 5px 10px;
+    background-color: #eee;
+}
+
+.telert-debugger .debugger-setting-setting table .value {
+    padding: 5px 10px;
+    background-color: #fff;
+}
+
+.telert-debugger .logs {
+    height: 500px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.telert-debugger .logs table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.telert-debugger .logs th {
+    text-align: left;
+    background-color: #eee;
+    border-bottom: 1px solid #ddd;
+    padding: 4px;
+}
+
+.telert-debugger .logs td {
+    padding: 4px 10px;
+    vertical-align: top;
+}
+
+.telert-debugger .logs .date,
+.telert-debugger .logs .context {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.telert-debugger .logs tr:nth-child(even) td {
+    background-color: #fff;
+}
+
+.woocommerce-reports-wide .widefat th.sortable {
+    padding: 0;
+}
